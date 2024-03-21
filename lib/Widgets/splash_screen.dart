@@ -78,6 +78,10 @@ class _splashScreenState extends State<splashScreen> {
               FloatingActionButton(
                 onPressed: () {
                   if (isLast) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                    );
                   } else {
                     boardContorller.nextPage(
                         duration: Duration(milliseconds: 750),
