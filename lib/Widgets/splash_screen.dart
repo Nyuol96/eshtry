@@ -1,4 +1,5 @@
 import 'package:eshtry/Widgets/loginScreen.dart';
+import 'package:eshtry/components.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -78,14 +79,11 @@ class _splashScreenState extends State<splashScreen> {
               FloatingActionButton(
                 onPressed: () {
                   if (isLast) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()),
-                    );
+                    navigateTo(context, LoginScreen());
                   } else {
                     boardContorller.nextPage(
-                        duration: Duration(milliseconds: 750),
-                        curve: Curves.fastLinearToSlowEaseIn);
+                        curve: Curves.fastLinearToSlowEaseIn,
+                        duration: Duration(milliseconds: 10));
                   }
                 },
                 child: Icon(Icons.arrow_forward_ios),
