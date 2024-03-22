@@ -38,6 +38,20 @@ class _splashScreenState extends State<splashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        actions: [
+          TextButton(
+            onPressed: () {
+              navigateAndFinish(context, LoginScreen());
+            },
+            child: Text(
+              'SKIP',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+          )
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -82,8 +96,9 @@ class _splashScreenState extends State<splashScreen> {
                     navigateTo(context, LoginScreen());
                   } else {
                     boardContorller.nextPage(
-                        curve: Curves.fastLinearToSlowEaseIn,
-                        duration: Duration(milliseconds: 10));
+                      duration: Duration(milliseconds: 750),
+                      curve: Curves.fastLinearToSlowEaseIn,
+                    );
                   }
                 },
                 child: Icon(Icons.arrow_forward_ios),

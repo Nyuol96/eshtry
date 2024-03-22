@@ -5,6 +5,15 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text('Login'),
+          Text('Login now to browse our Hot Offers')
+        ]),
+      ),
+    );
   }
 }// TODO Implement this library.
