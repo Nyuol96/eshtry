@@ -11,7 +11,16 @@ class LoginScreen extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text('Login'),
-          Text('Login now to browse our Hot Offers')
+          Text(
+            'Login now to browse our Hot Offers',
+            style: Theme.of(context)
+                .textTheme
+                .bodyLarge
+                ?.copyWith(color: Colors.grey),
+          ),
+          SizedBox(
+            height: 30,
+          ),
         ]),
       ),
     );
