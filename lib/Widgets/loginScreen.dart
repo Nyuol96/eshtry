@@ -34,6 +34,32 @@ class LoginScreen extends StatelessWidget {
               //   }
               // },
               label: 'Email Address'),
+          defaultFormField(
+              controller: passwordContorller,
+              keyboardType: TextInputType.visiblePassword,
+              suffixIcon: Icons.visibility_outlined,
+              suffixPressedFuncion: () {},
+              // validate: (String value) {
+              //  if (value.isEmpty) {
+              // return 'password is too short';
+
+              // }
+              // },
+              label: 'Password'),
+          SizedBox(
+            height: 30,
+          ),
+          defaultButton(
+            function: () {},
+            text: 'Login',
+            isUppercase: true,
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Row(
+            children: [Text('Dont Have an Account, Register ')],
+          )
         ]),
       ),
     );

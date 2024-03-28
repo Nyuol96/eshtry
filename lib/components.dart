@@ -18,6 +18,15 @@ void navigateAndFinish(
           builder: (context) => widget,
         ),
         (route) => false);
+Widget defaultButton({
+  double width = double.infinity,
+  Color background = Colors.blue,
+  bool isUppercase = true,
+  double radius = 3.0,
+  required Function function,
+  required String text,
+}) =>
+    Container();
 
 Widget defaultTextButton({required onPressed, required String text}) =>
     TextButton(
