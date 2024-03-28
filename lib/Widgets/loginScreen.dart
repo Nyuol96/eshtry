@@ -1,3 +1,4 @@
+import 'package:eshtry/components.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -5,6 +6,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var emailContorller = TextEditingController();
+    var passwordContorller = TextEditingController();
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
@@ -21,6 +24,16 @@ class LoginScreen extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
+          defaultFormField(
+              controller: emailContorller,
+              keyboardType: TextInputType.emailAddress,
+              prefixIcon: Icons.email,
+              // validate: (String value) {
+              //  if (value.isEmpty) {
+              //    return 'please enter your email address';
+              //   }
+              // },
+              label: 'Email Address'),
         ]),
       ),
     );
